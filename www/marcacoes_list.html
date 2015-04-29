@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Marcacoes</title>
+<meta content="CodeCharge Studio 4.1.00.031" name="GENERATOR">
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-99F07CBB
+function bind_events() {
+    if (functionExists("Header_bind_events")) Header_bind_events();
+    if (functionExists("Footer_bind_events")) Footer_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>&nbsp;</p>
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Grid marcacoes -->
+      <table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td> 
+                <td class="th"><strong>Marcações</strong></td> 
+                <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Id --><a href="{Sort_URL}" id="marcacoesSorter_Id">Id</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Id --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Nome --><a href="{Sort_URL}" id="marcacoesSorter_Nome">Nome</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Nome --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Data --><a href="{Sort_URL}" id="marcacoesSorter_Data">Data</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Data --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter1 --><a href="{Sort_URL}" id="marcacoesSorter1">Hora</a> 
+                <!-- BEGIN Asc_On --><img alt="{res:CCS_ASC}" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="{res:CCS_DESC}" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter1 --></th>
+ 
+                <th scope="col"></th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td style="TEXT-ALIGN: right">{Id}&nbsp;</td> 
+                <td>{Nome}&nbsp;</td> 
+                <td>{Data}&nbsp;</td> 
+                <td>&nbsp;{Hora}</td> 
+                <td><a href="{Detail_Src}" id="marcacoesDetail_{marcacoes:rowNumber}">Detalhes</a>&nbsp;</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="5">No records</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="5"><a href="marcacoes_maint.php"><img alt="http://" src="Styles/Simple/Images/pt/ButtonInsert.gif" border="0"></a>&nbsp; 
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Simple/Images/pt/ButtonPrev.gif" border="0"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Simple/Images/pt/ButtonNext.gif" border="0"></a> <!-- END Next_On --><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid marcacoes --></td>
+  </tr>
+</table>
+ {Footer} 
+</body>
+</html>

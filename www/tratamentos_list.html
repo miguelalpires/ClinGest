@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Tratamentos</title>
+<meta content="CodeCharge Studio 4.1.00.031" name="GENERATOR">
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-99F07CBB
+function bind_events() {
+    if (functionExists("Header_bind_events")) Header_bind_events();
+    if (functionExists("Footer_bind_events")) Footer_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>&nbsp;</p>
+<table width="100%">
+  <tr>
+    <td align="center">
+      <!-- BEGIN Record tratamentosSearch -->
+      <form id="tratamentosSearch" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" width="80%" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Tratamentos</strong></td> 
+                  <td class="HeaderRight"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th" width="10%"><label for="tratamentosSearchs_Paciente_id">Paciente</label></td> 
+                  <td>
+                    <select id="tratamentosSearchs_Paciente_id" name="{s_Paciente_id_Name}">
+                      <option value="" selected>Todos&nbsp;os&nbsp;Pacientes</option>
+                      {s_Paciente_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_DoSearch --><input id="tratamentosSearchButton_DoSearch" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Search" src="Styles/Simple/Images/pt/ButtonSearch.gif" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record tratamentosSearch -->
+      <!-- BEGIN Grid tratamentos -->
+      <table cellspacing="0" cellpadding="0" width="80%" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td> 
+                <td class="th"><strong></strong></td> 
+                <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Id --><a href="{Sort_URL}" id="tratamentosSorter_Id">Id</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Id --></th>
+ 
+                <th scope="col">&nbsp; 
+                <!-- BEGIN Sorter Sorter_Nome --><a href="{Sort_URL}" id="tratamentosSorter_Nome">Nome</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Nome --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Data --><a href="{Sort_URL}" id="tratamentosSorter_Data">Data</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Data --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Descricao --><a href="{Sort_URL}" id="tratamentosSorter_Descricao">Descrição</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Descricao -->&nbsp;</th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Valor --><a href="{Sort_URL}" id="tratamentosSorter_Valor">Valor</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Valor --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Factura --><a href="{Sort_URL}" id="tratamentosSorter_Factura"></a>
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Factura --></th>
+ 
+                <th scope="col"></th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td style="TEXT-ALIGN: right">{Id}&nbsp;</td> 
+                <td>{Nome}</td> 
+                <td>{Data}&nbsp;</td> 
+                <td>&nbsp;{Descricao}</td> 
+                <td style="TEXT-ALIGN: right">{Valor}&nbsp;&#128;&nbsp;</td> 
+                <td style="TEXT-ALIGN: right"><input id="tratamentosFactura_{tratamentos:rowNumber}" disabled type="checkbox" value="1" name="{Factura_Name}" {Factura}>&nbsp;</td> 
+                <td><a href="{Detail_Src}" id="tratamentosDetail_{tratamentos:rowNumber}">Detalhes</a></td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="7">No records</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="7"><img alt="http://" src="Styles/Simple/Images/pt/ButtonInsert.gif" border="0">&nbsp; 
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Simple/Images/pt/ButtonPrev.gif" border="0"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Simple/Images/pt/ButtonNext.gif" border="0"></a> <!-- END Next_On --><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid tratamentos --></td>
+  </tr>
+</table>
+{Footer} 
+</body>
+</html>

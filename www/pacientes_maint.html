@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Pacientes</title>
+<meta content="CodeCharge Studio 4.1.00.031" name="GENERATOR">
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//pacientesButton_Delete_OnClick @5-BE9229DC
+function pacientesButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End pacientesButton_Delete_OnClick
+
+//bind_events @1-AC78FAB2
+function bind_events() {
+    if (functionExists("Header_bind_events")) Header_bind_events();
+    if (functionExists("Footer_bind_events")) Footer_bind_events();
+    addEventHandler("pacientesButton_Delete", "click", pacientesButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>&nbsp;</p>
+<table width="100%" border="0">
+
+  <tr>
+    <td>
+      <table width="80%" align="center">
+        <tr>
+          <td><a href="pacientes_list.php"><img alt="http://" src="Styles/Simple/Images/pt/ButtonCancel.gif" border="0"></a> </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+ 
+ <tr><td>
+
+
+
+<!-- BEGIN Record pacientes -->
+<form id="pacientes" name="{HTMLFormName}" action="{Action}" method="post">
+  <table width="80%" align="center" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Paciente</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="pacientesNome">Nome</label></td> 
+            <td><input id="pacientesNome" maxlength="250" size="50" value="{Nome}" name="{Nome_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="pacientesMorada">Morada</label></td> 
+            <td><input id="pacientesMorada" maxlength="250" size="50" value="{Morada}" name="{Morada_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="pacientesTelefone">Telefone</label></td> 
+            <td><input id="pacientesTelefone" maxlength="9" size="10" value="{Telefone}" name="{Telefone_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="pacientesTelemovel">Telemóvel</label></td> 
+            <td><input id="pacientesTelemovel" maxlength="9" size="10" value="{Telemovel}" name="{Telemovel_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="pacientesEmail">Email</label></td> 
+            <td><input id="pacientesEmail" maxlength="128" size="50" value="{Email}" name="{Email_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="pacientesProfissao">Profissão</label></td> 
+            <td><input id="pacientesProfissao" maxlength="128" size="50" value="{Profissao}" name="{Profissao_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="pacientesConvencoes">Convenções</label></td> 
+            <td><input id="pacientesConvencoes" maxlength="250" size="50" value="{Convencoes}" name="{Convencoes_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="pacientesIndicacao">Indicação</label></td> 
+            <td><input id="pacientesIndicacao" maxlength="250" size="50" value="{Indicacao}" name="{Indicacao_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input id="pacientesButton_Insert" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Add" src="Styles/Simple/Images/pt/ButtonInsert.gif" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input id="pacientesButton_Update" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Submit" src="Styles/Simple/Images/pt/ButtonUpdate.gif" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input id="pacientesButton_Delete" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Delete" src="Styles/Simple/Images/pt/ButtonDelete.gif" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record pacientes --><br>
+{Footer} 
+</body>
+</html>

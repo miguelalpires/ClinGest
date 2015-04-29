@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Pacientes</title>
+<meta content="CodeCharge Studio 4.1.00.031" name="GENERATOR">
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-99F07CBB
+function bind_events() {
+    if (functionExists("Header_bind_events")) Header_bind_events();
+    if (functionExists("Footer_bind_events")) Footer_bind_events();
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>&nbsp;</p>
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record pacientesSearch -->
+      <form id="pacientesSearch" name="{HTMLFormName}" action="{Action}" method="post">
+        <table width="80%" align="center" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Pacientes</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th" width="10%" ><label for="pacientesSearchs_Nome">Nome</label></td> 
+                  <td><input id="pacientesSearchs_Nome" maxlength="250" size="50" value="{s_Nome}" name="{s_Nome_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="pacientesSearchs_Telefone">Telefone</label></td> 
+                  <td><input id="pacientesSearchs_Telefone" maxlength="10" size="10" value="{s_Telefone}" name="{s_Telefone_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="pacientesSearchs_Telemovel">Telemovel</label></td> 
+                  <td><input id="pacientesSearchs_Telemovel" maxlength="10" size="10" value="{s_Telemovel}" name="{s_Telemovel_Name}"></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_DoSearch --><input id="pacientesSearchButton_DoSearch" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Search" src="Styles/Simple/Images/pt/ButtonSearch.gif" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record pacientesSearch -->
+      <!-- BEGIN Grid pacientes -->
+      <table width="80%" align="center" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td> 
+                <td class="th"></td> 
+                <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Caption">
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Id --><a href="{Sort_URL}" id="pacientesSorter_Id">Id</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Id --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Nome --><a href="{Sort_URL}" id="pacientesSorter_Nome">Nome</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Nome --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Morada --><a href="{Sort_URL}" id="pacientesSorter_Morada">Morada</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Morada --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Telefone --><a href="{Sort_URL}" id="pacientesSorter_Telefone">Telefone</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Telefone --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Telemovel --><a href="{Sort_URL}" id="pacientesSorter_Telemovel">Telemóvel</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Telemovel --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Email --><a href="{Sort_URL}" id="pacientesSorter_Email">Email</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Email --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Profissao --><a href="{Sort_URL}" id="pacientesSorter_Profissao">Profissão</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Profissao --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Convencoes --><a href="{Sort_URL}" id="pacientesSorter_Convencoes">Convenções</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Convencoes --></th>
+ 
+                <th scope="col">
+                <!-- BEGIN Sorter Sorter_Indicacao --><a href="{Sort_URL}" id="pacientesSorter_Indicacao">Indicação</a> 
+                <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Simple/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Simple/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Indicacao --></th>
+ 
+                <th scope="col"></th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td style="TEXT-ALIGN: right">{Id}&nbsp;</td> 
+                <td>{Nome}&nbsp;</td> 
+                <td>{Morada}&nbsp;</td> 
+                <td style="TEXT-ALIGN: right">{Telefone}&nbsp;</td> 
+                <td style="TEXT-ALIGN: right">{Telemovel}&nbsp;</td> 
+                <td>{Email}&nbsp;</td> 
+                <td>{Profissao}&nbsp;</td> 
+                <td>{Convencoes}&nbsp;</td> 
+                <td>{Indicacao}&nbsp;</td> 
+                <td><a href="{Detail_Src}" id="pacientesDetail_{pacientes:rowNumber}">Detalhes</a>&nbsp;</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="10">No records</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="10"><a href="pacientes_maint.php"><img alt="http://" src="Styles/Simple/Images/pt/ButtonInsert.gif" border="0"></a>&nbsp;
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="Styles/Simple/Images/pt/ButtonPrev.gif" border="0"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="Styles/Simple/Images/pt/ButtonNext.gif" border="0"></a> <!-- END Next_On --><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid pacientes --></td>
+  </tr>
+</table>
+{Footer} 
+</body>
+</html>

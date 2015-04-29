@@ -1,0 +1,49 @@
+<link href="{page:pathToRoot}Styles/adx.css" type="text/css" rel="stylesheet">
+<link href="{page:pathToRoot}Styles/Simple/Menu.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-A2F3288E
+</script>
+<script language="JavaScript" src="{page:pathToRoot}ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="UTF-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A9E6EF51
+</script>
+<script language="JavaScript" src="{page:pathToRoot}js/menu/WCH.js" type="text/javascript"></script>
+<script language="JavaScript" src="{page:pathToRoot}js/menu/ADxMenu.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//bind_events @1-73B672FD
+function Header_bind_events() {
+    addEventHandler("HeaderMenu1Container", "load", load_ADxMenu);
+}
+//End bind_events
+
+//End CCS script
+</script>
+<table class="simpleMenu" width="100%" bgcolor="#3d84cc" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Menu Menu1 -->
+      <div class="MenuStyle" id="HeaderMenu1Container">
+        <ul class="adxm {Menu1:MenuType} level1">
+          <!-- BEGIN Item -->
+          <!-- BEGIN OpenLevel -->
+          <ul class="level{Menu1:Item_Level}">
+            <!-- END OpenLevel -->
+            <li {Menu1:DefaultItem}><a href="{ItemLink_Src}" class="{Menu1:Submenu}" target="{Menu1:Target}" title="{Menu1:Title}">{ItemLink}</a> 
+            <!-- BEGIN CloseItem --></li>
+ <!-- END CloseItem -->
+            <!-- BEGIN CloseLevel -->
+          </ul>
+ </li>
+ <!-- END CloseLevel --><!-- END Item -->
+        </ul>
+ 
+      </div>
+ <!-- END Menu Menu1 --></td> 
+    <td align="right"><a href="logout.php"><font color="#c9d1db">Sair</font></a>&nbsp;</td> 
+  </tr>
+</table>

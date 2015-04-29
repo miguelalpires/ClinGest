@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Marcacoes</title>
+<meta content="CodeCharge Studio 4.1.00.031" name="GENERATOR">
+<link href="Styles/Simple/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-B92A2EB6
+
+var marcacoes_DatePicker_Data = new Object(); 
+marcacoes_DatePicker_Data.format           = "dd-mm-yyyy";
+marcacoes_DatePicker_Data.style            = "Styles/Simple/Style.css";
+marcacoes_DatePicker_Data.relativePathPart = "";
+marcacoes_DatePicker_Data.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//marcacoesButton_Delete_OnClick @5-8B482603
+function marcacoesButton_Delete_OnClick()
+{
+    disableValidation = true;
+}
+//End marcacoesButton_Delete_OnClick
+
+//bind_events @1-D590D99C
+function bind_events() {
+    if (functionExists("Header_bind_events")) Header_bind_events();
+    if (functionExists("Footer_bind_events")) Footer_bind_events();
+    addEventHandler("marcacoesButton_Delete", "click", marcacoesButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>{Header}</p>
+<p>&nbsp;</p>
+<table width="100%" border="0">
+  <tr>
+    <td>
+      <table width="80%" align="center">
+        <tr>
+          <td><a href="marcacoes_list.php"><img alt="http://" src="Styles/Simple/Images/pt/ButtonCancel.gif" border="0"></a> </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+ 
+  <tr>
+    <td>
+      <!-- BEGIN Record marcacoes -->
+      <form id="marcacoes" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" width="80%" align="center" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td> 
+                  <td class="th"><strong>Marcação</strong></td> 
+                  <td class="HeaderRight"><img alt="" src="Styles/Simple/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="marcacoesPaciente_id">Paciente</label></td> 
+                  <td>
+                    <select id="marcacoesPaciente_id" name="{Paciente_id_Name}">
+                      <option value="" selected>Select Value</option>
+                      {Paciente_id_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="marcacoesData">Data</label></td> 
+                  <td><input id="marcacoesData" maxlength="100" size="14" value="{Data}" name="{Data_Name}">
+                    <!-- BEGIN DatePicker DatePicker_Data --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="marcacoesDatePicker_Data"><img id="marcacoesDatePicker_Data_Image" alt="Show Date Picker" src="Styles/Simple/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_Data --></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th">Hora&nbsp;</td> 
+                  <td>
+                    <select id="marcacoesHora" name="{Hora_Name}">
+                      {Hora_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input id="marcacoesButton_Insert" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Add" src="Styles/Simple/Images/pt/ButtonInsert.gif" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input id="marcacoesButton_Update" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Submit" src="Styles/Simple/Images/pt/ButtonUpdate.gif" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Delete --><input id="marcacoesButton_Delete" style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" type="image" alt="Delete" src="Styles/Simple/Images/pt/ButtonDelete.gif" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record marcacoes --></td>
+  </tr>
+</table>
+{Footer} 
+</body>
+</html>
